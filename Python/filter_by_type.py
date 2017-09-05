@@ -1,5 +1,6 @@
 """This is a Coding Dojo homework assignment."""
 
+
 def test_a_value(val):
     """Given a value, return what type it is."""
     if type(val) is int:
