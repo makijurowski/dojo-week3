@@ -8,7 +8,7 @@ def make_and_read_dict(my_dict):
     for eachKey, eachValue in my_dict.iteritems():
         print ('My ' + eachKey + ' is ' + eachValue + '.')
 
-aboutMe = {'name': 'Maki', 'age': '30', 'country of birth': 'the United States',
+aboutMe = {'name': 'Maki', 'age': '30', 'birth country': 'the United States',
            'favorite programming language': 'Python'}
 
 make_and_read_dict(aboutMe)
