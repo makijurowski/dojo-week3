@@ -5,9 +5,9 @@ class Bike(object):
         self.miles = 0
 
     def display_info(self):
-        print('This bike costs $' + str(self.price) + ' dollars with a max speed of ' +
-              self.max_speed + 'MPH. It has been ridden for a total of' +
-              str(self.miles) + ' miles.')
+        print('This bike costs $' + str(self.price) + ' dollars ' +
+              'with a max speed of ' + self.max_speed + 'MPH. It has been ' +
+              'ridden for a total of' + str(self.miles) + ' miles.')
 
     def ride(self):
         print 'Riding...'
