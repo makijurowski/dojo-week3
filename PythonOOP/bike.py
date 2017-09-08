@@ -6,16 +6,19 @@ class Bike(object):
 
     def display_info(self):
         print('This bike costs $' + str(self.price) + ' dollars ' +
-              'with a max speed of ' + self.max_speed + 'MPH. It has been ' +
-              'ridden for a total of' + str(self.miles) + ' miles.')
+              'with a max speed of ' + self.max_speed + '. It has been ' +
+              'ridden for a total of ' + str(self.miles) + ' miles.')
+        return self
 
     def ride(self):
         print 'Riding...'
         self.miles += 10
+        return self
 
     def reverse(self):
         print 'Reversing...'
         self.miles -= 5
+        return self
 
     def repeat(self, n, my_function):
         self.n = n

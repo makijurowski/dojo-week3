@@ -8,12 +8,15 @@ class Animal(object):
 
     def walk(self):
         self.health -= 1
+        return self
 
     def run(self):
         self.health -= 5
+        return self
 
     def display_health(self):
         print self.health
+        return self
 
     def repeat(self, n, my_function, *args):
         self.n = n
@@ -29,6 +32,7 @@ class Dog(Animal):
 
     def pet(self):
         self.health += 5
+        return self
 
 
 class Dragon(Animal):
@@ -38,10 +42,12 @@ class Dragon(Animal):
 
     def fly(self):
         self.health -= 10
+        return self
 
     def display_health(self):
         super(Dragon, self).display_health()
         print 'I am a dragon!'
+        return self
 
 # Provided test cases.
 animal1 = Animal('ChiDog', 100)

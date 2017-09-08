@@ -1,0 +1,11 @@
+Yay you successfully created another GET route that serves a page!
+
+
+Route Structure When creating generic routes we write something like this: @app.route('/some_route') def some_function_name():
+// your code here 
+
+The above route would be triggered when a user requests: localhost:5000/some_route In other words,
+our route rules define what comes after the initial forward-slash. When a request matching our routing rule is received by
+the server, the function that immediately follows the @app.route('/some_route') is invoked. Although the code we show above
+is brief, we're bringing together a lot of concepts you've never seen before. To get you started we've shown you some complete
+code. Next, we'll break down each component in more detail.

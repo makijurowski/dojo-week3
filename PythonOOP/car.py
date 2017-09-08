@@ -21,6 +21,7 @@ class Car(object):
                     '\nMileage: ' + self.mileage +
                     '\nTax: ' + str(self.tax * 100) + '%')
         print(car_info + '\n')
+        return self
 
 car1 = Car(2000, '35mph', 'Full', '15mpg')
 car2 = Car(1000, '5mph', 'Not Full', '15mpg')
