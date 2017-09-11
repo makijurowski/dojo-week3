@@ -1,0 +1,22 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Form Test Index</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<div id="wrapper">
+    <h1>My Form Index</h1>
+    <h3>Create a User</h3>
+    <form action='/users' method='post'>
+        <div class="newField">
+            <label for="name">Name: </label> <input type='text' name='name'></input>
+        </div>
+        <div class="newField">
+            <label for="email">Email: </label> <input type='text' name='email'></input>
+        </div>
+        <input id="button" type="submit" value="Create a New User"></input>
+    </form>
+</div>
+</body>
+</html>

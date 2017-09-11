@@ -1,0 +1,31 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Coding Dojo Survey Results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="wrapper">
+        <div class="survey-box">
+            <h1>Submitted Info</h1>
+            <div class="result-entry">
+                <span class="result-label">Name:</span>
+                <span class="result-info">{{name}}</span> 
+            </div>
+            <div class="result-entry">
+                <span class="result-label">Dojo Location:</span>
+                <span class="result-info">{{dojolocation}}</span>
+            </div>
+            <div class="result-entry">
+                <span class="result-label">Favorite Language:</span>
+                <span class="result-info">{{favlanguage}}</span>
+            </div>
+            <div class="result-entry">
+                <span class="result-label">Comments:</span>
+                <span class="result-info">{{comments}}</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

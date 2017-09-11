@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Coding Dojo Survey Form</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+    <body>
+        <div id="wrapper">
+            <div class="survey-box">
+                <h1>My Coding Dojo Student Survey</h1>
+                <form action="/result" method="post">
+                    <div class="form-entry">
+                        <label for="name">Name: </label>
+                        <input type="text" class="form-blank" name="name"></input>
+                    </div>
+                    <div class="form-entry">
+                        <label for="dojo-location">Dojo Location: </label>
+                        <select class="form-blank" name="dojo-location">
+                            <option value="none"></option>
+                            <option value="Seattle, WA">Seattle, WA</option>
+                            <option value="New York, NY">New York, NY</option>
+                            <option value="San Jose, CA">San Jose, CA</option>
+                        </select>
+                    </div>
+                    <div class="form-entry">
+                        <label for="fav-language">Favorite Language: </label>
+                        <select class="form-blank" name="fav-language">
+                            <option value="none"></option>
+                            <option value="Python">Python</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="HTML/CSS">HTML/CSS</option>
+                        </select>
+                    </div>
+                    <div class="form-entry">
+                        <label for="comments" id="comments-label">Comments (optional): </label>
+                        <textarea name="comments" id="textbox" cols="53" rows="6"></textarea>
+                    </div>
+                    <input id="button" type="submit" value="Submit"></input>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    background-color: #CFA6E2;
+}
+
+#wrapper {
+    width: 970px;
+    min-height: 800px;
+    padding: 50px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-style: italic;
+    margin: 10px auto 15px 10px;
+}
+
+.hideme {
+    display: none;
+}
+
+img {
+    max-width: 80%;
+    display: block;
+}

@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Counter</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>Counter</h1>
+            <h3>This page has been refreshed {{session['count']}} time(s).</h3>
+            <form action="/count" method="post">
+                <input type="hidden" name="counter" value="1">
+                <input id="button" type="submit" name="add2" value="Add 2 and Refresh">
+                <input id="button" type="submit" name="reset" value="Reset Count">
+            </form>
+        </div>
+    </body>
+</html>

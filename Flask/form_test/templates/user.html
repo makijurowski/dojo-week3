@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Form Test Show</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>New User Created!</h1>
+            <div class="newField">
+                <span class="label">Name: </span> {{session['name']}}
+            </div>
+            <div class="newField">
+                <span class="label">Email: </span> {{session['email']}}
+            </div>
+        </div>
+    </body>
+</html>
