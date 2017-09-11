@@ -1,0 +1,35 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="survey-box">
+            <h1>Your Information</h1>
+            <h3>{% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+                <p>{{message}}</p>
+                {% endfor %} {% endif %} {% endwith %}</h3>
+            <div class="result-entry">
+                <span class="result-label">Email: </span>
+                <span class="result-info">{{session['email']}}</span>
+            </div>
+            <div class="result-entry">
+                <span class="result-label">First Name: </span>
+                <span class="result-info">{{session['first_name']}}</span>
+            </div>
+            <div class="result-entry">
+                <span class="result-label">Last Name: </span>
+                <span class="result-info">{{session['last_name']}}</span>
+            </div>
+            <div class="result-entry">
+                <span class="result-label">Password: </span>
+                <span class="result-info">{{session['password']}}</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

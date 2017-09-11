@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Registration Form</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+    <body>
+        <div id="wrapper">
+            <div class="survey-box">
+                <h1>Registration Form</h1>
+                    <h3>
+                        {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+                        <p>{{message}}</p>
+                        {% endfor %} {% endif %} {% endwith %}
+                    </h3>
+                <form action="/process" method="POST">
+                    <div class="form-entry">
+                        <label for="email">Email: </label>
+                        <input type="email" class="form-blank" name="email" value="{{ request.form['email'] }}"></input>
+                    </div>
+                    <div class="form-entry">
+                        <label for="first_name">First Name: </label>
+                        <input type="text" class="form-blank" name="first_name" value="{{ request.form['first_name'] }}"></input>
+                    </div>
+                    <div class="form-entry">
+                        <label for="last_name">Last Name: </label>
+                        <input type="text" class="form-blank" name="last_name" value="{{ request.form['last_name'] }}"></input>
+                    </div>
+                    <div class="form-entry">
+                        <label for="password">Password: </label>
+                        <input type="password" class="form-blank" name="password"></input>
+                    </div>
+                    <div class="form-entry">
+                        <label for="confirm_password">Confirm Password: </label>
+                        <input type="password" class="form-blank" name="confirm_password"></input>
+                    </div>
+                    <input id="button" type="submit" name="submit" value="Submit Form"></input>
+                </form>     
+            </div>
+        </div>
+    </body>
+</html>

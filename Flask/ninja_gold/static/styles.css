@@ -39,6 +39,11 @@ h3 {
     display: block;
 }
 
+p {
+    margin-left: 1rem;
+    color: red;
+}
+
 #wrapper {
     width: 970px;
     margin: 0 auto;

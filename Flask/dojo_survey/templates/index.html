@@ -8,7 +8,16 @@
         <div id="wrapper">
             <div class="survey-box">
                 <h1>My Coding Dojo Student Survey</h1>
-                <form action="/result" method="post">
+                <h3>
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            {% for message in messages %}
+                                <p>{{message}}</p>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                </h3>
+                <form action="/process" method="post">
                     <div class="form-entry">
                         <label for="name">Name: </label>
                         <input type="text" class="form-blank" name="name"></input>
