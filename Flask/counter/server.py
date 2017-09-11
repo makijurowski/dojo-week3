@@ -7,7 +7,6 @@ import sys
 
 app = Flask(__name__)
 app.secret_key = 'COUNTMEUP'
-myCount = 0
 
 
 @app.route('/')

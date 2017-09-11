@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>The Great Number Game</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}">
+        </script>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>Welcome to The Great Number Game!</h1>
+            <h3 class="instructions">I am thinking of a number between 1 and 100, go ahead and take a guess!</h3>
+            <div id="check_guess" style="display: none;">
+                <span id="low">Too low!</span>
+                <span id="high">Too high!</span>
+                <span id="correct">You guessed correctly!</span>
+                <input type="button" class="button" name="play_again" value="Click to play again!" style="display: none;">
+            </div>
+            <form action="/guess" method="post" class="my_form">
+                <input type="hidden" name="magic_number" value="{{session['magic_number']}}">
+                <input type="number" name="current_guess">
+                <input type="submit" id="check" class="button" name="submit" value="Am I right?">
+            </form>
+        </div>
+    </body>
+</html>
